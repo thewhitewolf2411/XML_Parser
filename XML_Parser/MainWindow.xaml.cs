@@ -33,13 +33,19 @@ namespace XML_Parser
         {
 
             OpenFileDialog OFN = new OpenFileDialog();
+            OFN.Multiselect = true;
+            OFN.Filter = "XML Files (*.xml;)|*.xml";
             if (OFN.ShowDialog() == true) {
 
-                string sadrzaj = File.ReadAllText(OFN.FileName.ToString());
-                //xmlShow.Text = sadrzaj;
-
-                sadrzaj.Replace("°", "&#x000B0;");
-                sadrzaj.Replace();
+                foreach (String files in OFN.FileNames)
+                {
+                    string Line = File.ReadAllText(files);
+                    Line = Line.Replace("pagedata", "pgData");
+                    xmlShow.Text = Line;
+                    File.WriteAllText(files, Line);
+                    
+                    
+                }
 
             }
 

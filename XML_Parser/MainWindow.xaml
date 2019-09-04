@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <Button x:Name="loadXml" Content="Load Xml" HorizontalAlignment="Left" Margin="333,19,0,0" VerticalAlignment="Top" Width="75" Click="LoadXml_Click"/>
-        <TextBox x:Name="xmlShow" HorizontalAlignment="Left" Height="282" Margin="70,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="620"/>
+        <TextBox x:Name="xmlShow" HorizontalAlignment="Left" Height="282" Margin="70,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="620"/>
 
     </Grid>
 </Window>
